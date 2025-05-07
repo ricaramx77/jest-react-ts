@@ -1,0 +1,60 @@
+
+Librerias Jest
+
+npm install --save-dev @testing-library/jest-dom
+npm install --save-dev @testing-library/react
+npm install --save-dev @testing-library/user-event
+
+O puede ser:
+npm install --save-dev @testing-library/react @testing-library/user-event @testing-library/jest-dom
+
+
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "test": "jest", //<----------------------------Nótese
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  {
+   "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    //---
+  }
+  }
+
+------------------------------------------------------
+React + Typescript
+
+npm install --save-dev jest @types/jest 
+npm install --save-dev ts-jest 
+npm install --save-dev babel-jest 
+npm install --save-dev @testing-library/react 
+npm install --save-dev @testing-library/user-event 
+npm install --save-dev @testing-library/jest-dom
+npm install --save-dev ts-node
+npm install --save-dev jest-environment-jsdom
+npm install --save-dev identity-obj-proxy
+
+jest.config.ts:
+
+export default {
+    testEnvironment: "jsdom",
+    setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"],
+    transform: {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    moduleNameMapper: {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy"
+    }
+  };
+
+
+
+ "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],

@@ -28,16 +28,63 @@ npm install --save-dev @testing-library/react @testing-library/user-event @testi
 ------------------------------------------------------
 React + Typescript
 
+Libraries - Jest
+
+Aquí tienes una descripción de cada una de las librerías que mencionaste:
+
+- jest: Framework de pruebas para JavaScript que permite realizar pruebas unitarias y de integración de manera eficiente.
+
+- jest-environment-jsdom: Configura Jest para usar JSDOM, permitiendo pruebas en un entorno similar al navegador.
+
+- @types/jest: Definiciones de tipos para Jest, necesarias cuando se usa TypeScript.
+
+- babel-jest: Permite usar Babel con Jest para transformar código antes de ejecutarlo en las pruebas.
+
+- @testing-library/react: Librería para probar componentes de React de manera accesible y centrada en el usuario.
+
+- @testing-library/user-event: Extensión de Testing Library que permite simular interacciones del usuario como clics y escritura.
+
+- @testing-library/jest-dom: Proporciona matchers adicionales para Jest, facilitando la verificación de elementos en el DOM.
+
+- identity-obj-proxy: Útil para pruebas con Jest, permite mapear módulos de estilo (CSS, SCSS) a objetos proxy en lugar de cadenas.
+
+Typescript:
+
+- ts-node: Ejecuta TypeScript directamente en Node.js sin necesidad de compilar previamente.
+
+- ts-jest: Transformador de Jest que permite ejecutar pruebas en TypeScript sin necesidad de compilar previamente.
+
+
+
+Si necesitas más detalles sobre alguna de ellas, dime y profundizamos.
+
+Instalación:
+
 npm install --save-dev jest @types/jest 
-npm install --save-dev ts-jest 
 npm install --save-dev babel-jest 
 npm install --save-dev @testing-library/react 
 npm install --save-dev @testing-library/user-event 
 npm install --save-dev @testing-library/jest-dom
-npm install --save-dev ts-node
 npm install --save-dev jest-environment-jsdom
 npm install --save-dev identity-obj-proxy
 
+Para Typescript:
+
+npm install --save-dev ts-node
+npm install --save-dev ts-jest 
+
+---------------------
+package.json:
+
+ "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "test": "jest",//<--------------------------------Nótese
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+
+---------------------
 jest.config.ts:
 
 export default {
@@ -51,7 +98,7 @@ export default {
     }
   };
 
-
+---------------------
 tsConfig.json:
 
 {

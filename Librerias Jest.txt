@@ -60,6 +60,7 @@ Si necesitas más detalles sobre alguna de ellas, dime y profundizamos.
 
 Instalación:
 
+npm install --save-dev jest
 npm install --save-dev jest @types/jest 
 npm install --save-dev babel-jest 
 npm install --save-dev @testing-library/react 
